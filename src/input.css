@@ -1,0 +1,40 @@
+@import "tailwindcss" source(none);
+@source "../index.html";
+
+@theme {
+  --font-sans: "Segoe UI", Arial, sans-serif;
+  --color-ink: #152b3b;
+  --color-paper: #f5f4ef;
+  --color-lime: #d5ef88;
+  --color-muted: #56646e;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+  body { margin: 0; }
+  ::selection { background: #d5ef88; color: #152b3b; }
+  :focus-visible { outline: 3px solid #528218; outline-offset: 5px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; }
+}
+
+@media print {
+  @page { size: A4; margin: 12mm; }
+  body { background: white !important; font-size: 10pt !important; }
+  header, .no-print, #skip-link { display: none !important; }
+  main { max-width: none !important; padding: 0 !important; }
+  #about { padding-top: 0 !important; padding-bottom: 1.2rem !important; }
+  #about h1 { font-size: 38pt !important; }
+  #resume-grid { display: grid !important; grid-template-columns: 31% 1fr !important; gap: 1.25rem !important; }
+  #profile-panel { background: #f0f1ee !important; color: #152b3b !important; padding: 1.2rem !important; position: static !important; }
+  #profile-panel * { color: #152b3b !important; border-color: #bac2c4 !important; }
+  #profile-panel a { display: none !important; }
+  #profile-panel section + section { margin-top: 1.5rem !important; }
+  .resume-section { padding: 1rem 0 !important; break-inside: avoid; }
+  .project-row { padding: 1rem 0 !important; }
+  footer { margin-top: 1.5rem !important; }
+  * { box-shadow: none !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
