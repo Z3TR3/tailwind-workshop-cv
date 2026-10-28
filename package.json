@@ -1,0 +1,13 @@
+{
+  "name": "abdulaziz-tailwind-cv",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Abdulaziz Imran's CV for the Tailwind CSS workshop",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./assets/styles.css --minify && node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}
