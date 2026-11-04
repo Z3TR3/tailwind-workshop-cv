@@ -1,6 +1,21 @@
 # Tailwind Workshop — Abdulaziz Imran CV
 
-A responsive student CV website updated using **Tailwind CSS**.
+A responsive student CV website updated using **Tailwind CSS** and **FetchAPI**.
+
+## FetchAPI clock assignment
+
+The World clock section loads the city and current time from:
+
+`https://timeapi.io/api/Time/current/zone?timeZone=Asia%2FBangkok`
+
+- `fetch()` requests the API and `response.json()` reads the response.
+- The displayed city comes from `data.timeZone` (`Asia/Bangkok` → `Bangkok`).
+- The initial clock time comes from `data.dateTime`, rather than the computer's clock.
+- The clock advances every second and resynchronizes with the API every five minutes.
+- A failed request shows an error message and a **Try again** button.
+- Internet access and JavaScript are required for the clock.
+
+To check: open the page, find **World clock**, and check that **Bangkok** and a ticking time appear. In browser developer tools, the Network tab shows the TimeAPI request and its JSON response.
 
 ## Open the website
 
@@ -14,6 +29,7 @@ Open `index.html` in a browser. The generated `assets/styles.css` file is includ
 - Original Your Tech branding with an inline SVG logo.
 - Keyboard navigation, a skip link, and reduced-motion support.
 - Print / Save PDF button and a print-friendly layout.
+- A live city clock using FetchAPI.
 
 ## Files
 
@@ -56,3 +72,4 @@ Optional GitHub Pages: **Settings → Pages → Deploy from a branch → main �
 
 **Student:** Abdulaziz Imran  
 **Major:** Information Technology (IT)
+
